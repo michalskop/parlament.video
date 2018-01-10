@@ -4,6 +4,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="images/icon.svg" rel="icon"  type="image/x-icon" />
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="bootstrap.min.css">
@@ -95,7 +96,7 @@
     </div>
 
     <?php
-        file_get_contents('http://localhost/michal/project/parlament.video/www/log.php?' . $_SERVER['REQUEST_URI']);
+        file_get_contents('https://parlament.video/log.php?' . $_SERVER['REQUEST_URI']);
     ?>
     <iframe src="https://volebnikalkulacka.cz/session/" width="0" height="0" frameborder="0"></iframe>
 
