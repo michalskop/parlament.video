@@ -1,0 +1,33 @@
+
+install nginx
+https://www.digitalocean.com/community/tutorials/how-to-install-linux-nginx-mysql-php-lemp-stack-in-ubuntu-16-04
+sudo apt-get update
+sudo apt-get install nginx
+
+sudo apt-get install php-fpm
+sudo nano /etc/php/7.0/fpm/php.ini
+       cgi.fix_pathinfo=0
+
+sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-available/parlament.video
+sudo nano /etc/nginx/sites-available/parlament.video 
+
+sudo ln -s /etc/nginx/sites-available/parlament.video /etc/nginx/sites-enabled/parlament.video
+
+
+sudo mkdir /home/projects
+sudo chowm michal:michal /home/projects
+mkdir /home/projects/parlament.video
+mkdir /home/projects/parlament.video/www
+
+sudo systemctl reload nginx
+
+# certbot
+https://certbot.eff.org/#ubuntuxenial-nginx
+sudo apt-get update
+sudo apt-get install software-properties-common
+sudo add-apt-repository ppa:certbot/certbot
+sudo apt-get update
+sudo apt-get install python-certbot-nginx 
+    https://github.com/certbot/certbot/issues/5405
+
+
