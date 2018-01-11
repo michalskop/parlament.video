@@ -29,11 +29,8 @@
     <title>Parlament.video</title>
 
     <style>
-        footer {
-            position:fixed !important;
-            bottom:0;
-            width: 100%;
-            justify-content: flex-start;
+        .video {
+            max-width: 600px;
         }
         @media (max-width: 720px) {
 
@@ -64,7 +61,9 @@
         <div class="day">
             <a name="2018-01-10"></a>
             <h3>10. 1. 2018</h3>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLwwpkfhGl_D-eP0tXFI7_WgT9Fobl1jGX" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <div class="embed-responsive embed-responsive-16by9 video">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/videoseries?list=PLwwpkfhGl_D-eP0tXFI7_WgT9Fobl1jGX" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
             <div class="pb-2">
                 <i class="fas fa-info-circle"></i> Přepis schůzí:
             </div>
@@ -74,28 +73,57 @@
                 </li>
             </ul>
         </div>
+
+        <?php
+            $settings = json_decode(file_get_contents("../settings.json"));
+            $url = "https://www.darujme.cz/api/v1/organization/1200143/pledges-by-filter?apiId=" . $settings->apiId . "&apiSecret=" . $settings->apiSecret . "&projectId=1200625";
+            $pledges = json_decode(file_get_contents($url));
+            $success = ["success", "success_money_on_account", "sent_to_organization"];
+            $supporters = [];
+            foreach($pledges->pledges as $s) {
+                $support = false;
+                foreach($s->transactions as $t) {
+                    if (in_array($t->state, $success)) {
+                        $support = true;
+                    }
+                }
+                if ($support) {
+                    $supporters[] = $s->donor->firstName . "&nbsp;" . $s->donor->lastName;
+                }
+            }
+         ?>
+         <div class="col-lg-6 alert alert-info">
+             <h4>
+                 <i class="fas fa-heart text-danger"></i> Tento projekt podpořili:
+             </h4>
+             <?php
+                echo implode(' • ', $supporters);
+              ?>
+         </div>
+
     </div>
 
-    <footer class="navbar navbar-light bg-light">
-        <div class="container d-flex justify-content-between">
-            <span>Od autorů <a href="https://volebnikalkulacka.cz" class="m-1">Volební kalkulačky</a></span>
-            <span><a href="https://projects.kohovolit.eu">Další projekty autorů</a> • Kontakt: <a href="http://kohovolit.eu/kontakt">KohoVolit.eu</a></span>
-        </div>
-    </footer>
 
-    <div id="darujme-widget" class="p-2">
-        <div data-darujme-widget-token="xdr0zrhuv7a029gr" class="mx-auto">&nbsp;</div>
+    <div id="darujme-container" class="p-2 d-flex justify-content-end">
+        <div data-darujme-widget-token="xdr0zrhuv7a029gr" class="" id="darujme-widget">&nbsp;</div>
         <style>
-            #darujme-widget {
+            #darujme-container {
                 padding-bottom: 60px;
             }
+            #darujme-widget {
+                margin-left: auto;
+                margin-right: auto;
+                display: block;
+            }
             @media (min-width: 992px) {
-                #darujme-widget {
+                #darujme-container {
                     padding-bottom: 0;
-                    margin: 0;
-                    position: absolute;
-                    bottom: 60px;
-                    right: 0;
+                    position: sticky;
+                    bottom: 0;
+                }
+                #darujme-widget {
+                    margin-right: inherit;
+                    margin-left: inherit;
                 }
             }
         </style>
@@ -111,10 +139,26 @@
         </script>
     </div>
 
+
+    <footer class="navbar navbar-light bg-light">
+        <div class="container d-flex justify-content-between">
+            <span>Od autorů <a href="https://volebnikalkulacka.cz" class="m-1">Volební kalkulačky</a></span>
+            <span><a href="https://projects.kohovolit.eu">Další projekty autorů</a> • Kontakt: <a href="http://kohovolit.eu/kontakt">KohoVolit.eu</a> • <a href="https://github.com/michalskop/parlament.video"><i class="fab fa-github"></i> Kód</a>
+            </span>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
     <?php
-        file_get_contents('https://parlament.video/log.php?' . $_SERVER['REQUEST_URI']);
+        // file_get_contents('https://parlament.video/log.php?' . $_SERVER['REQUEST_URI']);
     ?>
-    <iframe src="https://volebnikalkulacka.cz/session/" width="0" height="0" frameborder="0"></iframe>
+    <!-- <iframe src="https://volebnikalkulacka.cz/session/" width="0" height="0" frameborder="0"></iframe> -->
 
 
     <!-- Optional JavaScript -->

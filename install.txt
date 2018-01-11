@@ -39,6 +39,9 @@ touch /home/projects/parlament.video/www/log.csv
 sudo chown michal:www-data /home/projects/parlament.video/www/log.csv
 sudo chmod 620 /home/projects/parlament.video/www/log.csv
 
+settings.json
+
+
 # sync
 /usr/bin/rsync -av michal@163.172.176.115:/mnt/data2/*.mp4 /tmp/psp/
 /usr/bin/rsync -av /tmp/psp/*.mp4 michal@192.168.1.9:/var/services/homes/michal/parlament.video/data2/
