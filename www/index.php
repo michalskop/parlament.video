@@ -49,6 +49,7 @@
         <div class="day">
             <a name="2018-01-10"></a>
             <h3>10. 1. 2018</h3>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLwwpkfhGl_D-eP0tXFI7_WgT9Fobl1jGX" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
             <div class="pb-2">
                 <i class="fas fa-info-circle"></i> Přepis schůzí:
             </div>
