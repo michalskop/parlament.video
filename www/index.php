@@ -9,7 +9,7 @@
     <meta name="keywords" content="poslanecká sněmovna">
     <meta name="author" content="Michal Škop, KohoVolit.eu">
 
-    <meta property="og:image" content="images/picture3.jpg"/>
+    <meta property="og:image" content="https://parlament.video/images/picture3.jpg"/>
     <meta property="og:title" content="Parlament.video - archiv záznamů jednání Sněmovny"/>
     <meta property="og:url" content="https://parlament.video/" />
     <meta property="og:site_name" content="Parlament.video - archiv záznamů jednání Sněmovny"/>
