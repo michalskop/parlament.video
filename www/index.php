@@ -4,6 +4,18 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Archiv video záznamů z jednání Poslanecké sněmovny Parlamentu ČR">
+    <meta name="keywords" content="poslanecká sněmovna">
+    <meta name="author" content="Michal Škop, KohoVolit.eu">
+
+    <meta property="og:image" content="images/picture3.jpg"/>
+    <meta property="og:title" content="Parlament.video - archiv záznamů jednání Sněmovny"/>
+    <meta property="og:url" content="https://parlament.video/" />
+    <meta property="og:site_name" content="Parlament.video - archiv záznamů jednání Sněmovny"/>
+    <meta property="og:type" content="website"/>
+
+
     <link href="images/icon-inverse-light.svg" rel="icon"  type="image/x-icon" />
 
     <!-- Bootstrap CSS -->
