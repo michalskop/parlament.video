@@ -13,7 +13,10 @@
     <meta property="og:title" content="Parlament.video - archiv záznamů jednání Sněmovny"/>
     <meta property="og:url" content="https://parlament.video/" />
     <meta property="og:site_name" content="Parlament.video - archiv záznamů jednání Sněmovny"/>
+    <meta property="og:description" content="Parlament.video - archiv video záznamů z jednání Poslanecké sněmovny Parlamentu ČR"/>
     <meta property="og:type" content="website"/>
+    <meta property="fb:app_id" content="382131198923863" />
+
 
 
     <link href="images/icon-inverse-light.svg" rel="icon"  type="image/x-icon" />
