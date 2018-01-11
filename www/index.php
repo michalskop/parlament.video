@@ -47,7 +47,7 @@
                 <img src="images/icon-light.svg" width="30" height="30" alt="" class="m-2"> Parlament.video
             </a>
             <span class="my-2 my-lg-0 text-light">
-                BETA
+                ALFA
             </span>
         </div>
     </nav>
