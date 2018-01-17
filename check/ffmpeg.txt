@@ -1,0 +1,9 @@
+/usr/bin/ffmpeg -loglevel quiet -i http://pspcr-live.ssl.cdn.cra.cz/live.pscr/smil:snemovna2/index.m3u8 -t 01:00:00 -c copy -bsf:a aac_adtstoasc -c:v libx264 -b:v 0.5M /home/michal/dev/psp_video/$(date +\%Y-\%m-\%dT\%H\%M\%S.\%3N).mp4 > /dev/null 2>&1
+
+/usr/bin/ffmpeg -loglevel quiet -i http://pspcr-live.ssl.cdn.cra.cz/live.pscr/smil:snemovna2/index.m3u8 -t 00:01:00 -c copy -bsf:a aac_adtstoasc -c:v libx264 -b:v 0.5M /home/michal/dev/psp_video/$(date +\%Y-\%m-\%dT\%H\%M\%S.\%3N).mp4
+
+rsync -av 51.15.202.125:/home/michal/*.mp4 psp2/
+
+rsync -av /tmp/psp2/michal/*.mp4 192.168.1.9:/var/services/homes/michal/parlament.video/data2/
+
+/usr/bin/ffmpeg -loglevel quiet -i http://pspcr-live.ssl.cdn.cra.cz/live.pscr/smil:snemovna2/index.m3u8 -t 02:00:00 -c copy -bsf:a aac_adtstoasc -c:v libx264 -b:v 0.5M /tmp/$(date +\%Y-\%m-\%dT\%H\%M\%S.\%3N).mp4
