@@ -9,7 +9,7 @@ sudo nano /etc/php/7.0/fpm/php.ini
        cgi.fix_pathinfo=0
 
 sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-available/parlament.video
-sudo nano /etc/nginx/sites-available/parlament.video 
+sudo nano /etc/nginx/sites-available/parlament.video
 
 sudo ln -s /etc/nginx/sites-available/parlament.video /etc/nginx/sites-enabled/parlament.video
 
@@ -27,7 +27,7 @@ sudo apt-get update
 sudo apt-get install software-properties-common
 sudo add-apt-repository ppa:certbot/certbot
 sudo apt-get update
-sudo apt-get install python-certbot-nginx 
+sudo apt-get install python-certbot-nginx
     https://github.com/certbot/certbot/issues/5405
 
 
@@ -46,3 +46,10 @@ settings.json
 /usr/bin/rsync -av michal@163.172.176.115:/mnt/data2/*.mp4 /tmp/psp/
 /usr/bin/rsync -av /tmp/psp/*.mp4 michal@192.168.1.9:/var/services/homes/michal/parlament.video/data2/
 
+# cut video
+# https://stackoverflow.com/questions/18444194/cutting-the-videos-based-on-start-and-end-time-using-ffmpeg
+ffmpeg -i input.mp4 -ss 00:01:00 -to 00:02:00 -c copy output.mp4
+
+# join videos
+# https://askubuntu.com/questions/637074/merging-multiple-more-than-two-videos-on-ubuntu
+mkvmerge -o outfile.mkv infile_01.mp4 \+ infile_02.mp4 \+ infile_03.mp4
