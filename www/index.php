@@ -59,6 +59,22 @@
         </div>
 
         <div class="day">
+            <a name="2018-01-25"></a>
+            <h3>25. 1. 2018</h3>
+            <div class="embed-responsive embed-responsive-16by9 video">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/videoseries?list=PLwwpkfhGl_D_cADKw4VSj5y8hajNwY0Gm" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+            <div class="pb-2">
+                <i class="fas fa-info-circle"></i> Přepis schůzí:
+            </div>
+            <ul class="">
+                <li class="">
+                    <a href="http://www.psp.cz/eknih/2017ps/stenprot/006schuz/6-6.html" target="_blank">6. schůze</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="day">
             <a name="2018-01-24"></a>
             <h3>24. 1. 2018</h3>
             <div class="embed-responsive embed-responsive-16by9 video">
