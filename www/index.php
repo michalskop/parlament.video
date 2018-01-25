@@ -62,7 +62,7 @@
             <a name="2018-01-24"></a>
             <h3>24. 1. 2018</h3>
             <div class="embed-responsive embed-responsive-16by9 video">
-                <iframe class="embed-responsive-item" src="https://youtu.be/exFOQ_dFl20" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <iframe class="embed-responsive-item" src="https://youtube.com/embed/exFOQ_dFl20" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
             </div>
             <div class="pb-2">
                 <i class="fas fa-info-circle"></i> Přepis schůzí:
@@ -78,7 +78,7 @@
             <a name="2018-01-23"></a>
             <h3>23. 1. 2018</h3>
             <div class="embed-responsive embed-responsive-16by9 video">
-                <iframe class="embed-responsive-item" src="https://youtu.be/v4cSu9K71FA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <iframe class="embed-responsive-item" src="https://youtube.com/embed/v4cSu9K71FA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
             </div>
             <div class="pb-2">
                 <i class="fas fa-info-circle"></i> Přepis schůzí:
