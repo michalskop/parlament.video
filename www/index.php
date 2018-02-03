@@ -44,7 +44,7 @@
                 <img src="images/icon-light.svg" width="30" height="30" alt="" class="m-2"> Parlament.video
             </a>
             <span class="my-2 my-lg-0 text-light">
-                ALFA
+                ALFA+
             </span>
         </div>
     </nav>
@@ -58,133 +58,43 @@
             Aby tento projekt mohl fungovat, <a href="https://www.darujme.cz/projekt/1200625" target="_blank"><strong>potřebujeme Vaši podporu!</strong></a>
         </div>
 
-        <div class="day">
-            <a name="2018-01-25"></a>
-            <h3>25. 1. 2018</h3>
-            <div class="embed-responsive embed-responsive-16by9 video">
-                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/videoseries?list=PLwwpkfhGl_D_cADKw4VSj5y8hajNwY0Gm" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <?php
+            $format = "d. m. Y";
+            $days = json_decode(file_get_contents("videos.json"));
+            foreach($days as $day) {
+        ?>
+            <div class="day">
+                <a name="<?php echo $day->day;?>"></a>
+                <h3><?php echo date($format, strtotime($day->day));?></h3>
+                <?php
+                    if (isset($day->video)) {
+                        $html = '<div class="pl-4">
+                        <div class="embed-responsive embed-responsive-16by9 video">
+                            <iframe class="embed-responsive-item" src="';
+                        $html .= $day->video;
+                        $html .= '" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                            </div>
+                        </div>';
+                        echo $html;
+                    }
+                 ?>
+                <div class="pl-4 pb-2">
+                    <i class="fas fa-info-circle"></i> Přepis schůzí:
+                </div>
+                <ul class="">
+                    <?php
+                        foreach($day->texts as $text) {
+                            $html = '<li class="">
+                                <a href="' . $text->url . '" target="_blank">' . $text->session . '. schůze</a>
+                            </li>';
+                            echo $html;
+                        }
+                     ?>
+                </ul>
             </div>
-            <div class="pb-2">
-                <i class="fas fa-info-circle"></i> Přepis schůzí:
-            </div>
-            <ul class="">
-                <li class="">
-                    <a href="http://www.psp.cz/eknih/2017ps/stenprot/006schuz/6-6.html" target="_blank">6. schůze</a>
-                </li>
-            </ul>
-        </div>
-
-        <div class="day">
-            <a name="2018-01-24"></a>
-            <h3>24. 1. 2018</h3>
-            <div class="embed-responsive embed-responsive-16by9 video">
-                <iframe class="embed-responsive-item" src="https://youtube.com/embed/exFOQ_dFl20" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-            </div>
-            <div class="pb-2">
-                <i class="fas fa-info-circle"></i> Přepis schůzí:
-            </div>
-            <ul class="">
-                <li class="">
-                    <a href="http://www.psp.cz/eknih/2017ps/stenprot/006schuz/6-5.html" target="_blank">6. schůze</a>
-                </li>
-            </ul>
-        </div>
-
-        <div class="day">
-            <a name="2018-01-23"></a>
-            <h3>23. 1. 2018</h3>
-            <div class="embed-responsive embed-responsive-16by9 video">
-                <iframe class="embed-responsive-item" src="https://youtube.com/embed/v4cSu9K71FA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-            </div>
-            <div class="pb-2">
-                <i class="fas fa-info-circle"></i> Přepis schůzí:
-            </div>
-            <ul class="">
-                <li class="">
-                    <a href="http://www.psp.cz/eknih/2017ps/stenprot/006schuz/6-4.html" target="_blank">6. schůze</a>
-                </li>
-            </ul>
-        </div>
-
-        <div class="day">
-            <a name="2018-01-19"></a>
-            <h3>19. 1. 2018</h3>
-            <div class="embed-responsive embed-responsive-16by9 video">
-                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/videoseries?list=PLwwpkfhGl_D_mJuDWvL0q9__SgO5AMPfA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-            </div>
-            <div class="pb-2">
-                <i class="fas fa-info-circle"></i> Přepis schůzí:
-            </div>
-            <ul class="">
-                <li class="">
-                    <a href="http://www.psp.cz/eknih/2017ps/stenprot/006schuz/6-3.html" target="_blank">6. schůze</a>
-                </li>
-            </ul>
-        </div>
-
-        <div class="day">
-            <a name="2018-01-18"></a>
-            <h3>18. 1. 2018</h3>
-            <div class="embed-responsive embed-responsive-16by9 video">
-                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/videoseries?list=PLwwpkfhGl_D9SaDLtTs3ZpMqSUYCqpwXG" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-            </div>
-            <div class="pb-2">
-                <i class="fas fa-info-circle"></i> Přepis schůzí:
-            </div>
-            <ul class="">
-                <li class="">
-                    <a href="http://www.psp.cz/eknih/2017ps/stenprot/006schuz/6-2.html" target="_blank">6. schůze</a>
-                </li>
-            </ul>
-        </div>
-
-        <div class="day">
-            <a name="2018-01-17"></a>
-            <h3>17. 1. 2018</h3>
-            <div class="embed-responsive embed-responsive-16by9 video">
-                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/videoseries?list=PLwwpkfhGl_D8enWK0Kb9Ie1yPOmZHIhNx" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-            </div>
-            <div class="pb-2">
-                <i class="fas fa-info-circle"></i> Přepis schůzí:
-            </div>
-            <ul class="">
-                <li class="">
-                    <a href="http://www.psp.cz/eknih/2017ps/stenprot/006schuz/6-1.html" target="_blank">6. schůze</a>
-                </li>
-            </ul>
-        </div>
-
-        <div class="day">
-            <a name="2018-01-16"></a>
-            <h3>16. 1. 2018</h3>
-            <div class="embed-responsive embed-responsive-16by9 video">
-                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/2p8vgx4o_7E" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-            </div>
-            <div class="pb-2">
-                <i class="fas fa-info-circle"></i> Přepis schůzí:
-            </div>
-            <ul class="">
-                <li class="">
-                    <a href="http://www.psp.cz/eknih/2017ps/stenprot/005schuz/5-2.html" target="_blank">5. schůze</a>
-                </li>
-            </ul>
-        </div>
-
-        <div class="day">
-            <a name="2018-01-10"></a>
-            <h3>10. 1. 2018</h3>
-            <div class="embed-responsive embed-responsive-16by9 video">
-                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/videoseries?list=PLwwpkfhGl_D-eP0tXFI7_WgT9Fobl1jGX" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-            </div>
-            <div class="pb-2">
-                <i class="fas fa-info-circle"></i> Přepis schůzí:
-            </div>
-            <ul class="">
-                <li class="">
-                    <a href="http://www.psp.cz/eknih/2017ps/stenprot/005schuz/5-1.html" target="_blank">5. schůze</a>
-                </li>
-            </ul>
-        </div>
+        <?php
+            }
+        ?>
 
         <?php
             $settings = json_decode(file_get_contents("../settings.json"));
@@ -208,15 +118,18 @@
              <h4>
                  <i class="fas fa-heart text-danger"></i> Tento projekt podpořili:
              </h4>
-             <?php
-                echo implode(' • ', $supporters);
-              ?>
+             <ul>
+                 <?php foreach($supporters as $s) {
+                     echo "<li>" . $s . "</li>";
+                 }
+                 ?>
+             </ul>
          </div>
 
     </div>
 
 
-    <div id="darujme-container" class="p-2 d-flex justify-content-end">
+    <div id="darujme-container" class="p-2 float-sm-right">
         <div data-darujme-widget-token="xdr0zrhuv7a029gr" class="" id="darujme-widget">&nbsp;</div>
         <style>
             #darujme-container {
