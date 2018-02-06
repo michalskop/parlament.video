@@ -1,5 +1,16 @@
 [
     {
+        "day": "2018-02-06",
+        "video": "https://www.youtube.com/embed/6Q2I1QJLVtQ",
+        "texts": [
+            {
+                "full": true,
+                "text": "Vyšetřovací komise k OKD",
+                "url": "https://www.psp.cz/sqw/text/text2.sqw?idd=143836"
+            }
+        ]
+    },
+    {
         "day": "2018-01-25",
         "video": "https://www.youtube.com/embed/videoseries?list=PLwwpkfhGl_D_cADKw4VSj5y8hajNwY0Gm",
         "texts": [

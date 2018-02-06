@@ -79,14 +79,20 @@
                     }
                  ?>
                 <div class="pl-4 pb-2">
-                    <i class="fas fa-info-circle"></i> Přepis schůzí:
+                    <i class="fas fa-info-circle"></i> Info (přepis schůzí):
                 </div>
                 <ul class="">
                     <?php
                         foreach($day->texts as $text) {
-                            $html = '<li class="">
-                                <a href="' . $text->url . '" target="_blank">' . $text->session . '. schůze</a>
-                            </li>';
+                            if (isset($text->full) and $text->full) {
+                                $html = '<li class="">
+                                    <a href="' . $text->url . '" target="_blank">' . $text->text . '</a>
+                                    </li>';
+                            } else {
+                                $html = '<li class="">
+                                    <a href="' . $text->url . '" target="_blank">' . $text->session . '. schůze</a>
+                                    </li>';
+                            }
                             echo $html;
                         }
                      ?>
