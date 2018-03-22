@@ -1,5 +1,25 @@
 [
     {
+        "day": "2018-03-21",
+        "video": "https://www.youtube.com/embed/videoseries?list=PLwwpkfhGl_D_MIi418u7zQjFzSx_MZ7fC",
+        "texts": [
+            {
+                "session": "7",
+                "url": "http://www.psp.cz/eknih/2017ps/stenprot/007schuz/7-8.html"
+            }
+        ]
+    },
+        {
+        "day": "2018-03-20",
+        "video": "https://www.youtube.com/embed/kjmFnoaVUxg",
+        "texts": [
+            {
+                "session": "7",
+                "url": "http://www.psp.cz/eknih/2017ps/stenprot/007schuz/7-7.html"
+            }
+        ]
+    },
+    {
         "day": "2018-03-09",
         "video": "https://www.youtube.com/embed/8xMt2erouf8",
         "texts": [
