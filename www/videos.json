@@ -1,5 +1,18 @@
 [
     {
+        "day": "2018-03-27",
+        "texts": [
+            {
+                "session": "10",
+                "url": "https://www.youtube.com/embed/zqk2H9xe9tw"
+            },
+            {
+                "session": "11",
+                "url": "https://www.youtube.com/embed/iDxao2KluhU"
+            }
+        ]
+    },
+    {
         "day": "2018-03-21",
         "video": "https://www.youtube.com/embed/videoseries?list=PLwwpkfhGl_D_MIi418u7zQjFzSx_MZ7fC",
         "texts": [
