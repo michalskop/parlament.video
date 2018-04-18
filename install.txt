@@ -43,8 +43,8 @@ settings.json
 
 
 # sync
-/usr/bin/rsync -av michal@163.172.176.115:/mnt/data2/*.mp4 /tmp/psp/
-/usr/bin/rsync -av /tmp/psp/*.mp4 michal@192.168.1.9:/var/services/homes/michal/parlament.video/data2/
+/usr/bin/rsync -av michal@51.15.70.251:/home/michal/*.mp4 /home/michal/project/parlament.video/video/
+/usr/bin/rsync -av /home/michal/project/parlament.video/video/*.mp4 michal@192.168.1.9:/var/services/homes/michal/parlament.video/data3/
 
 # cut video
 # https://stackoverflow.com/questions/18444194/cutting-the-videos-based-on-start-and-end-time-using-ffmpeg
