@@ -1,5 +1,19 @@
 [
     {
+        "day": "2018-05-31",
+        "video": "https://www.youtube.com/embed/cgBJ-tTEzpI",
+        "texts": [
+            {
+                "session": "14",
+                "url": "http://www.psp.cz/eknih/2017ps/stenprot/013schuz/14-1.html"
+            },
+            {
+                "session": "13",
+                "url": "http://www.psp.cz/eknih/2017ps/stenprot/013schuz/13-7.html"
+            }
+        ]
+    },
+    {
         "day": "2018-05-30",
         "video": "https://www.youtube.com/embed/videoseries?list=PLwwpkfhGl_D8VAeAkFzd0dxMyMIKhLwxg",
         "texts": [
