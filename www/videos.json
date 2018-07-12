@@ -1,7 +1,7 @@
 [
     {
         "day": "2018-07-11",
-        "video": "https://www.youtube.com/playlist?list=PLwwpkfhGl_D8jwSvu_VbU6yhuZPYV8s0z",
+        "video": "https://www.youtube.com/embed/videoseries?list=PLwwpkfhGl_D8jwSvu_VbU6yhuZPYV8s0z",
         "texts": [
             {
                 "session": "17",
@@ -55,6 +55,7 @@
     },
     {
         "day": "2018-06-26",
+        "video": "https://www.youtube.com/embed/w80uZlymOMo",
         "texts": [
             {
                 "session": "16",
