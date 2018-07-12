@@ -53,3 +53,8 @@ ffmpeg -i input.mp4 -ss 00:01:00 -to 00:02:00 -c copy output.mp4
 # join videos
 # https://askubuntu.com/questions/637074/merging-multiple-more-than-two-videos-on-ubuntu
 mkvmerge -o outfile.mkv infile_01.mp4 \+ infile_02.mp4 \+ infile_03.mp4
+
+# repair video (using another ok video)
+# https://github.com/ponchio/untrunc/
+cd ~/project/parlament.video/dev/untrunc-master/
+ ./untrunc ~/project/parlament.video/video/2018-07-11T150001.657.mp4 ~/dwhelper/jednani_1.mp4 

@@ -1,11 +1,70 @@
 [
     {
+        "day": "2018-07-11",
+        "video": "https://www.youtube.com/playlist?list=PLwwpkfhGl_D8jwSvu_VbU6yhuZPYV8s0z",
+        "texts": [
+            {
+                "session": "17",
+                "url": "http://www.psp.cz/eknih/2017ps/stenprot/017schuz/17-1.html"
+            }
+        ]
+    },
+    {
+        "day": "2018-07-10",
+        "video": "https://www.youtube.com/embed/o99YkazJW_o",
+        "texts": [
+            {
+                "session": "16",
+                "url": "http://www.psp.cz/eknih/2017ps/stenprot/016schuz/16-5.html"
+            }
+        ]
+    },
+    {
+        "day": "2018-06-29",
+        "video": "https://www.youtube.com/embed/Ie4nUKmqw5Y",
+        "texts": [
+            {
+                "session": "16",
+                "url": "http://www.psp.cz/eknih/2017ps/stenprot/016schuz/16-4.html"
+            }
+        ]
+    },
+    {
+        "day": "2018-06-28",
+        "video": "https://www.youtube.com/embed/videoseries?list=PLwwpkfhGl_D_lDWmON1HkwdkWHoQBPth-",
+        "texts": [
+            {
+                "session": "16",
+                "url": "http://www.psp.cz/eknih/2017ps/stenprot/016schuz/16-3.html"
+            }
+        ]
+    },
+    {
+        "day": "2018-06-27",
+        "video": "https://www.youtube.com/embed/videoseries?list=PLwwpkfhGl_D_b0SdmQueQFc4UMzalgnyI",
+        "texts": [
+            {
+                "session": "16",
+                "url": "http://www.psp.cz/eknih/2017ps/stenprot/016schuz/16-2.html"
+            }
+        ]
+    },
+    {
+        "day": "2018-06-26",
+        "texts": [
+            {
+                "session": "16",
+                "url": "http://www.psp.cz/eknih/2017ps/stenprot/016schuz/16-1.html"
+            }
+        ]
+    },
+    {
         "day": "2018-06-14",
         "video": "https://www.youtube.com/embed/videoseries?list=PLwwpkfhGl_D8OrZWRQqcRMruFOnd7ln9H",
         "texts": [
             {
                 "session": "13",
-                "url": "http://www.psp.cz/eknih/2017ps/stenprot/012schuz/13-8.html"
+                "url": "http://www.psp.cz/eknih/2017ps/stenprot/013schuz/13-8.html"
             }
         ]
     },
