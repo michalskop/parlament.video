@@ -60,3 +60,13 @@ mkvmerge -o outfile.mkv infile_01.mp4 \+ infile_02.mp4 \+ infile_03.mp4
 # https://github.com/ponchio/untrunc/
 cd ~/project/parlament.video/dev/untrunc-master/
  ./untrunc ~/project/parlament.video/video/2018-07-11T150001.657.mp4 ~/dwhelper/jednani_1.mp4 
+ 
+# update web
+git add -A
+git commit -m "update"
+git push
+ssh 212.47.239.34
+
+cd ../projects/parlament.video
+git pull
+exit
