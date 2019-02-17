@@ -1,0 +1,3 @@
+0 * * * * /usr/bin/ffmpeg -loglevel quiet -i http://pspcr-live.ssl.cdn.cra.cz/live.pscr/smil:snemovna2/index.m3u8 -t 01:00:00 -c copy -bsf:a aac_adtstoa$
+* * * * * /bin/bash /home/michal/restart.sh > /dev/null 2>&1 # doesn't work properly!
+14 3 * * * /usr/bin/find /home/michal/ -name "*.mp4" -mtime +4 | /usr/bin/xargs /bin/rm -rf
